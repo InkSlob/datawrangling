@@ -51,11 +51,11 @@ m.drawmeridians(np.arange(-120,-40,20),labels=[0,0,0,1])
 plt.plot(x, y, 'yo')
 for city, xc, yc in zip(cities, x, y):
     if city =='Culver City::2':
-        plt.text(xc-400000, yc+150000, city,bbox=dict(facecolor='red', alpha=0.6))
+        plt.text(xc-400000, yc+150000, 2,bbox=dict(facecolor='red', alpha=0.6))
     elif city =='Burbank::3':
-        plt.text(xc-250000, yc-200000, city,bbox=dict(facecolor='yellow', alpha=0.6))
+        plt.text(xc-250000, yc-200000, 3,bbox=dict(facecolor='yellow', alpha=0.6))
     else:
-        plt.text(xc+150000, yc-100000, city,bbox=dict(facecolor='green', alpha=0.6))
+        plt.text(xc+150000, yc-100000, 4,bbox=dict(facecolor='green', alpha=0.6))
 
 #m.drawgreatcircle(-118.2427266,34.053717,-118.3964665,34.0211224,linewidth=2,color='r')
 #m.drawgreatcircle(-118.3964665,34.0211224,-118.3258554,34.1816482,linewidth=2,color='r')
