@@ -1,0 +1,97 @@
+(dp0
+S'Culver City'
+p1
+(F34.03508
+F-118.369577
+tp2
+sS'newport news'
+p3
+(F37.220645
+F-76.3875949
+tp4
+sS'Austin'
+p5
+(F30.516863
+F-97.5684199
+tp6
+sS'Chicago'
+p7
+(F42.0231311
+F-87.52404399999999
+tp8
+sS'falls church, VA'
+p9
+(F38.8998318
+F-77.149789
+tp10
+sS'New York City'
+p11
+(F40.9152555
+F-73.70027209999999
+tp12
+sS'hampton, VA'
+p13
+(F37.1121091
+F-76.2707076
+tp14
+sS'flint, MI'
+p15
+(F43.079336
+F-83.6205449
+tp16
+sS'mount clemens, MI'
+p17
+(F42.617894
+F-82.856771
+tp18
+sS'Las Vegas'
+p19
+(F36.336407
+F-114.8763719
+tp20
+sS'Burbank'
+p21
+(F34.221654
+F-118.2801091
+tp22
+sS'Los Angeles'
+p23
+(F34.3373061
+F-118.1552891
+tp24
+sS'royal oak, MI'
+p25
+(F42.54032
+F-83.1107361
+tp26
+sS'norfolk'
+p27
+(F36.9692977
+F-76.17690499999999
+tp28
+sS'Atlanta'
+p29
+(F33.8876179
+F-84.289389
+tp30
+sS'harrison township, MI'
+p31
+(F42.4274
+F-83.324129
+tp32
+sS'San Francisco'
+p33
+(F37.9297708
+F-122.3279149
+tp34
+sS'detroit'
+p35
+(F42.4502301
+F-82.910451
+tp36
+sS'virginia beach'
+p37
+(F36.9845247
+F-75.86758189999999
+tp38
+s.

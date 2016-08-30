@@ -1,5 +1,3 @@
-#!/usr/bin/python
-
 import tweepy
 import psycopg2
 import psycopg2.extensions
@@ -14,7 +12,7 @@ data = pickle.load( open( "/home/master/my_python/data_wrangling/twitter_data_Tr
 
 data_dict = (data["statuses"][0] )
 
-# There are a total of 56 attributes from tweets, plus master_id [0] & sentiment [last]
+# There are a total of 56 attributes
 
 # used only for naming the columns 
 all_cols = ["follow_request_sent", "has_extended_profile", "profile_use_background_image", \
@@ -69,25 +67,17 @@ for i in range(0, l):
 	# master_id counter
 	tweet_attribute_list = [m_id]
 	m_id += 1
-	for x in tweet_attributes:
-		if x in tweet.keys():
-			x = tweet[x]
-			if type(x) == dict:
-				x = "NA"
-			tweet_attribute_list.append(x)
-			print x
-		else:
-			tweet_attribute_list.append("NA")
 	for y in user:
 		if y in tweet["user"].keys():
-			y = tweet["user"][y]
-			if type(y) == dict:
-				y = "NA"
 			tweet_attribute_list.append(y)
 		else:
 			tweet_attribute_list.append("NA")
 
-	
+	for x in tweet_attributes:
+		if x in tweet.keys():
+			tweet_attribute_list.append(x)
+		else:
+			tweet_attribute_list.append("NA")
 
 
 	print "Total number of attributes appended to the list: ", len(tweet_attribute_list)
@@ -120,7 +110,7 @@ for i in range(0, l):
 	        %s,%s,%s,%s,%s, %s,%s,%s,%s,%s, %s,%s,%s,%s,%s, %s,%s,%s,%s,%s, %s,%s,%s,%s,%s, \
 	        %s,%s,%s,%s,%s, %s);"
 
-	cur.execute(query, tweet_data_tuple)
+	cur.execute(query, tweet_data_tuple,)
 
 	print "New columns added to table."
 

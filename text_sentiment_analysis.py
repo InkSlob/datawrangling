@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-
+#!/usr/bin/python
 import tweepy
 import psycopg2
 import psycopg2.extensions
@@ -12,6 +12,9 @@ import pandas as pd
 import string
 import csv
 import matplotlib.pyplot as plt
+from mpl_toolkits.basemap import Basemap
+from mpl_toolkits.basemap import Basemap, cm
+import seaborn as sns
 
 # used only for naming the columns 
 all_cols = ["id", "follow_request_sent", "has_extended_profile", "profile_use_background_image", \
@@ -90,6 +93,13 @@ pd_data = pd.DataFrame(rows, columns=all_cols)
 del pd_data['sentiment']
 pd_data['sentiment'] = pd_data['text'].map(clean_text).map(sentiment)
 
-pd_data['sentiment'].plot(style='b', figsize=(8,5))
+# Seaborn Histogram
+''' represents the distribution of data by forming bins along the range of the 
+    data and then drawing bars to show the number of observations that fall in each bin.'''
+sns.distplot(pd_data['sentiment'], kde=False, bins=15, rug=True)
+sns.plt.title('Sentiment Distribution of "Real Trump" tweets')
+sns.plt.xlabel("Sentiment", fontsize=18)
+sns.plt.ylabel("Number of Tweets", fontsize=18)
+#plt.show()
 
-plt.show()
+print pd_data['location']
