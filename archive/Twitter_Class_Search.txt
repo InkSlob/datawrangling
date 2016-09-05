@@ -1,0 +1,17 @@
+Status(
+contributors=None, 
+truncated=False, 
+text=u'RT @buffsblg: @MrDane1982 She poses nude, Donald signs an anti porn pledge: Trump hates "illegals", his wife works illegally on a tourist v\u2026', 
+is_quote_status=False, 
+in_reply_to_status_id=None, 
+id=761286290000244736L, 
+favorite_count=0, 
+author=User(See Twitter_Class_User.txt), 
+geo=None, 
+in_reply_to_user_id_str=None, 
+lang=u'en', 
+created_at=datetime.datetime(2016, 8, 4, 19, 42, 50), 
+in_reply_to_status_id_str=None, 
+place=None, 
+source=u'Twitter for Android', 
+retweeted=False)

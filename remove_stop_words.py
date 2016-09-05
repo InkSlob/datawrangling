@@ -28,5 +28,3 @@ def remove_stop_words(text):
 	seq = s.join( new )
 	return seq
 
-words = "I am sick this this this of this and that and that and that if ever the MASTER was to go and eat the the the pear"
-print remove_stop_words(words)

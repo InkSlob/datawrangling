@@ -1,97 +1,442 @@
 (dp0
-S'Culver City'
+S'london'
 p1
-(F34.03508
-F-118.369577
+(F51.6723432
+F0.1482711
 tp2
-sS'newport news'
+sS'San Francisco'
 p3
+(F37.9297708
+F-122.3279149
+tp4
+sS'Texas'
+p5
+(F36.5007041
+F-93.5080389
+tp6
+sS'newport news'
+p7
 (F37.220645
 F-76.3875949
-tp4
-sS'Austin'
-p5
-(F30.516863
-F-97.5684199
-tp6
-sS'Chicago'
-p7
-(F42.0231311
-F-87.52404399999999
 tp8
 sS'falls church, VA'
 p9
 (F38.8998318
 F-77.149789
 tp10
-sS'New York City'
+sS'Bodensee, Schweiz'
 p11
-(F40.9152555
-F-73.70027209999999
+(F47.8174495
+F9.753852499999999
 tp12
-sS'hampton, VA'
+sS'New Brunswick, NJ'
 p13
-(F37.1121091
-F-76.2707076
+(F40.509268
+F-74.39304500000001
 tp14
-sS'flint, MI'
+sS'Washington, DC'
 p15
-(F43.079336
-F-83.6205449
+(F38.995548
+F-76.909393
 tp16
-sS'mount clemens, MI'
-p17
-(F42.617894
-F-82.856771
-tp18
-sS'Las Vegas'
-p19
-(F36.336407
-F-114.8763719
-tp20
-sS'Burbank'
-p21
-(F34.221654
-F-118.2801091
-tp22
-sS'Los Angeles'
-p23
-(F34.3373061
-F-118.1552891
-tp24
-sS'royal oak, MI'
-p25
-(F42.54032
-F-83.1107361
-tp26
-sS'norfolk'
-p27
-(F36.9692977
-F-76.17690499999999
-tp28
 sS'Atlanta'
-p29
+p17
 (F33.8876179
 F-84.289389
+tp18
+sS'Oklahoma'
+p19
+(F37.0023119
+F-94.43066209999999
+tp20
+sS'Denver,Co Lajolla,ca '
+p21
+(F39.91424689999999
+F-104.600296
+tp22
+sS'Florence, KY'
+p23
+(F39.03091390000001
+F-84.6110839
+tp24
+sS'Hillsboro, Oregon'
+p25
+(F45.57587059999999
+F-122.8589851
+tp26
+sS'Alaska'
+p27
+(F71.3868712
+F-129.9945563
+tp28
+sS'flint, MI'
+p29
+(F43.079336
+F-83.6205449
 tp30
-sS'harrison township, MI'
+sS'Utica, Michigan'
 p31
-(F42.4274
-F-83.324129
+(F42.637182
+F-82.99297399999999
 tp32
-sS'San Francisco'
+sS'norfolk'
 p33
-(F37.9297708
-F-122.3279149
+(F36.9692977
+F-76.17690499999999
 tp34
-sS'detroit'
+sS'Missouri, USA'
 p35
+(F40.61364
+F-89.09949399999999
+tp36
+sS'detroit'
+p37
 (F42.4502301
 F-82.910451
-tp36
+tp38
+sS'Independence, OR'
+p39
+(F44.872497
+F-123.1764269
+tp40
+sS'Mongolia'
+p41
+(F52.1486964
+F119.9319488
+tp42
+sS'Minneapolis'
+p43
+(F45.05125
+F-93.193794
+tp44
+sS'South Louisiana'
+p45
+(F33.019525
+F-88.8162401
+tp46
+sS'The City'
+p47
+(F37.9297708
+F-122.3279149
+tp48
+sS'Iowa'
+p49
+(F43.5011961
+F-90.140061
+tp50
+sS'chicago'
+p51
+(F42.0231311
+F-87.52404399999999
+tp52
+sS'New York City'
+p53
+(F40.9152555
+F-73.70027209999999
+tp54
+sS'mount clemens, MI'
+p55
+(F42.617894
+F-82.856771
+tp56
+sS'Ringgold, GA'
+p57
+(F34.934788
+F-85.087791
+tp58
+sS'Los Angeles'
+p59
+(F34.3373061
+F-118.1552891
+tp60
+sS'Tennessee, USA'
+p61
+(F36.678118
+F-81.6469001
+tp62
+sS'Ukraine'
+p63
+(F52.37958099999999
+F40.2285809
+tp64
+sS'New York, USA'
+p65
+(F40.9152555
+F-73.70027209999999
+tp66
+sS'Kentucky, USA'
+p67
+(F39.1474581
+F-81.9649709
+tp68
+sS'Florida'
+p69
+(F31.000968
+F-80.0311371
+tp70
+sS'Burbank'
+p71
+(F34.221654
+F-118.2801091
+tp72
+sS'Dallas, Texas, USA'
+p73
+(F33.0237921
+F-96.4637379
+tp74
+sS'United States'
+p75
+(F71.3867745
+F-66.9502861
+tp76
+sS'New Jersey, USA'
+p77
+(F41.3573676
+F-73.9024391
+tp78
+sS'harrison township, MI'
+p79
+(F42.4274
+F-83.324129
+tp80
 sS'virginia beach'
-p37
+p81
 (F36.9845247
 F-75.86758189999999
-tp38
+tp82
+sS'Jacmel '
+p83
+(F18.2581035
+F-72.5118159
+tp84
+sS'England, Great Britain.'
+p85
+(F55.8111127
+F1.762916
+tp86
+sS'NYC '
+p87
+(F40.9152555
+F-73.70027209999999
+tp88
+sS'US'
+p89
+(F71.3867745
+F-66.9502861
+tp90
+sS'Massachusetts, USA'
+p91
+(F42.88679
+F-69.9285512
+tp92
+sS'Hollywood,Chicago,Houston,N.Y.'
+p93
+(F40.9152555
+F-73.70027209999999
+tp94
+sS'Amarillo, TX'
+p95
+(F35.294475
+F-101.653684
+tp96
+sS'winter park florida '
+p97
+(F28.632476
+F-81.3079899
+tp98
+sS'NE OH'
+p99
+(F41.9773019
+F-80.5182
+tp100
+sS'Milton, ON, Canada'
+p101
+(F43.6289901
+F-79.724508
+tp102
+sS'Australia'
+p103
+(F-9.2198214
+F159.2557541
+tp104
+sS'Fabulous land'
+p105
+(F42.7007543
+F-84.56268159999999
+tp106
+sS'Mumbai'
+p107
+(F19.2716338
+F72.9864994
+tp108
+sS'California'
+p109
+(F42.0095169
+F-114.1313927
+tp110
+sS'Las Vegas, Nevada'
+p111
+(F36.3806231
+F-115.0620721
+tp112
+sS'Long Beach, CA'
+p113
+(F33.8854591
+F-118.063253
+tp114
+sS'England, United Kingdom'
+p115
+(F55.8111127
+F1.762916
+tp116
+sS'Moscow, Russia'
+p117
+(F56.0096569
+F37.9456611
+tp118
+sS'Philadelphia, PA'
+p119
+(F40.13799179999999
+F-74.95576299999999
+tp120
+sS'Austin'
+p121
+(F30.516863
+F-97.5684199
+tp122
+sS'India '
+p123
+(F35.5087008
+F97.395561
+tp124
+sS'Colorado, USA'
+p125
+(F41.00344399999999
+F-102.040878
+tp126
+sS'Salem Oregon'
+p127
+(F45.012341
+F-122.9337039
+tp128
+sS'Las Vegas'
+p129
+(F36.336407
+F-114.8763719
+tp130
+sS'royal oak, MI'
+p131
+(F42.54032
+F-83.1107361
+tp132
+sS'ua'
+p133
+(F52.37958099999999
+F40.2285809
+tp134
+sS'USA'
+p135
+(F71.3867745
+F-66.9502861
+tp136
+sS'Chicago'
+p137
+(F42.0231311
+F-87.52404399999999
+tp138
+sS'Pennsylvania, USA'
+p139
+(F42.2693867
+F-74.69009729999999
+tp140
+sS'Pacific Northwest '
+p141
+(F46.794303
+F-123.35722
+tp142
+sS'Texas, USA'
+p143
+(F36.5007041
+F-93.5080389
+tp144
+sS'Culver City'
+p145
+(F34.03508
+F-118.369577
+tp146
+sS'TX'
+p147
+(F36.5007041
+F-93.5080389
+tp148
+sS'NW USA'
+p149
+(F71.3867745
+F-66.9502861
+tp150
+sS'Las Vegas, NV'
+p151
+(F36.3806231
+F-115.0620721
+tp152
+sS'Zimbabwe'
+p153
+(F-15.609319
+F33.068236
+tp154
+sS'Broadway '
+p155
+(F43.0393
+F-73.78954639999999
+tp156
+sS'Los Angeles, CA'
+p157
+(F34.3373061
+F-118.1552891
+tp158
+sS'Madison '
+p159
+(F43.171916
+F-89.24645199999999
+tp160
+sS'Miami, FL'
+p161
+(F25.8556059
+F-80.1424004
+tp162
+sS'Los Angeles County'
+p163
+(F34.8231929
+F-117.6456041
+tp164
+sS'Slidell, LA'
+p165
+(F30.358065
+F-89.72323500000002
+tp166
+sS'Denver, CO'
+p167
+(F39.91424689999999
+F-104.600296
+tp168
+sS'Chicago, IL'
+p169
+(F42.0231311
+F-87.52404399999999
+tp170
+sS'hampton, VA'
+p171
+(F37.1121091
+F-76.2707076
+tp172
+sS'Beautiful Northwest USA'
+p173
+(F41.9674923
+F-92.5694755
+tp174
+sS'Tennessee'
+p175
+(F36.678118
+F-81.6469001
+tp176
 s.

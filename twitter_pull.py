@@ -21,7 +21,7 @@ def get_keys():
 
 
 def twitter(search_topic, cnt):
-	print "Calling function to get secret Twitter API keys."
+	#print "Calling function to get secret Twitter API keys."
 	key_dict = get_keys()
 	consumer_key = key_dict["consumer_key"]
 	consumer_secret = key_dict["consumer_secret"]
@@ -32,6 +32,6 @@ def twitter(search_topic, cnt):
 	api = tweepy.API(auth, parser=tweepy.parsers.JSONParser())
 	public_tweets = api.search(q=search_topic, count=cnt, lang="en") #  since="2013-06-01" ,  show_user="true"
 	pickle.dump( public_tweets, open( "twitter_data_Trump_SINCE.p", "wb" ) )
-	print "END"
+	#print "END"
 	return public_tweets
 
