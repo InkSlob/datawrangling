@@ -10,8 +10,7 @@ import string
 import pandas as pd
 import string
 
-def insert_data(data, topic):
-
+def insert_data(data, party, topic):
 	all_cols = ["follow_request_sent", "has_extended_profile", "profile_use_background_image", \
 	            "profile_sidebar_fill_color", "id1", "verified", "entities", "profile_image_url_https",\
 	            "geo_enabled", "profile_text_color", "followers_count", "profile_sidebar_border_color", \
@@ -45,6 +44,7 @@ def insert_data(data, topic):
 	for i in range(0, l):
 		tweet = (data["statuses"][i])
 		tweet_attribute_list = []
+		tweet_attribute_list.append(party)
 		tweet_attribute_list.append(topic)
 		for x in tweet_attributes:
 			if x in tweet.keys():
@@ -81,7 +81,7 @@ def insert_data(data, topic):
 		# Open a cursor to perform database operations
 		cur = conn.cursor() 
 
-		query = "INSERT INTO testall (topic, contributors,truncated, tw_text, \
+		query = "INSERT INTO testall (party, topic, contributors,truncated, tw_text, \
 				is_quote_status, in_reply_to_status_id, \
 		        id1, favorite_count, author, geo, in_reply_to_user_id_str, lang, \
 		        created_at, in_reply_to_status_id_str, place, source, retweeted, \
@@ -96,7 +96,7 @@ def insert_data(data, topic):
 		        name, url, created_at2, contributors_enabled, time_zone, protected, \
 		        default_profile, is_translator, listed_count) \
 		        VALUES \
-		        (%s,%s,%s,%s,%s,%s, %s,%s,%s,%s,%s, %s,%s,%s,%s,%s, %s,%s,%s,%s,%s, %s,%s,%s,%s,%s,\
+		        (%s,%s,%s,%s,%s,%s,%s, %s,%s,%s,%s,%s, %s,%s,%s,%s,%s, %s,%s,%s,%s,%s, %s,%s,%s,%s,%s,\
 		        %s,%s,%s,%s,%s, %s,%s,%s,%s,%s, %s,%s,%s,%s,%s, %s,%s,%s,%s,%s, %s,%s,%s,%s,%s, \
 		        %s,%s,%s,%s,%s, %s);"
 

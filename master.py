@@ -36,26 +36,34 @@ if (tbl_exist):
 else:
 	mt.create_table()
 
+
 config = config_file()
 for key, val in config.items():
-	data = tp.twitter(val, 3 )
+	p = None
+	p = key.find('T')
+	if p>1:
+		party = 'Trump'
+	else:
+		party = 'Hillary'
+	pulls_per_search = 10
+	data = tp.twitter(val, pulls_per_search )
 	topic = str(val)
 	topic = topic.replace('"','')
 	# Function to see if a table has already been created for the data dump
 	tbl_exist = cx.check_if_exist()
-	print "insert ", topic
-	da.insert_data(data, topic)
-	
-	#data = pickle.load( open( "/home/master/my_python/data_wrangling/twitter_data_Trump_SINCE.p", "rb" ))
-geo_cols = ['topic', 'sentiment', 'location']	
+	print "Insert: %s a %s tweet." % (topic, party)
+	da.insert_data(data, party, topic)
+
+#data = pickle.load( open( "/home/master/my_python/data_wrangling/twitter_data_Trump_SINCE.p", "rb" ))
+geo_cols = ['party', 'topic', 'sentiment', 'location']	
 geo_df = pd.DataFrame(columns=geo_cols)
 for key, val in config.items():
 	topic = str(val)
 	topic = topic.replace('"','')
-	print topic
 	current_df = sen.sentiment_overall(topic)
 	geo_df = geo_df.append(current_df)
-
+print "Generating map, this may take a few moments."
+#hillary_test = geo_df.loc[geo_df['party'] == 'Hillary']
+#print hillary_test.head(30)
 mp.make_map(geo_df)
-
-print "END"
+print "PROGRAM END"

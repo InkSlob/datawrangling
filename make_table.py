@@ -23,7 +23,7 @@ def create_table():
 	# Open a cursor to perform database operations
 	cur = conn.cursor()
 
-	cur.execute("CREATE TABLE testall (master_ID SERIAL PRIMARY KEY, topic TEXT, contributors TEXT,truncated TEXT, \
+	cur.execute("CREATE TABLE testall (master_ID SERIAL PRIMARY KEY, party TEXT, topic TEXT, contributors TEXT,truncated TEXT, \
 		tw_text TEXT, is_quote_status TEXT, in_reply_to_status_id TEXT, id1 TEXT, favorite_count TEXT, \
 		author TEXT, geo TEXT, in_reply_to_user_id_str TEXT, lang TEXT, created_at TEXT, in_reply_to_status_id_str TEXT, \
 		place TEXT, source TEXT, retweeted TEXT, follow_request_sent TEXT, has_extended_profile TEXT, \

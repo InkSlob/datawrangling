@@ -53,7 +53,7 @@ def sentiment(twt):
 def sentiment_overall(subject):
 	global negative, positive
 	# used only for naming the columns 
-	all_cols = ['master_ID', 'topic', 'contributors','truncated', 'tw_text', \
+	all_cols = ['master_ID', 'party', 'topic', 'contributors','truncated', 'tw_text', \
 				'is_quote_status', 'in_reply_to_status_id', \
 		        'id1', 'favorite_count', 'author', 'geo', 'in_reply_to_user_id_str', 'lang', \
 		        'created_at', 'in_reply_to_status_id_str', 'place', 'source', 'retweeted', \
@@ -106,22 +106,26 @@ def sentiment_overall(subject):
 	    print "I can't SELECT from testall - text_sentiment_analysis.py"
 
 	rows = cur.fetchall()
-	#print type(rows) = list 58 cols by 99 rows
 
 	pd_data = pd.DataFrame(rows, columns=all_cols)
 	#del pd_data['sentiment']
 	pd_data['sentiment'] = pd_data['tw_text'].map(clean_text).map(stop.remove_stop_words).map(sentiment)
-
+	
 	# Seaborn Histogram
 	''' represents the distribution of data by forming bins along the range of the 
-	    data and then drawing bars to show the number of observations that fall in each bin.'''
-	sns.distplot(pd_data['sentiment'], kde=False, bins=15, rug=True)
-	if subject == '':
-		subject = 'unknown'
-	sns.plt.title('Sentiment Distribution: %s' % subject)
-	sns.plt.xlabel("Sentiment", fontsize=18)
-	sns.plt.ylabel("Number of Tweets", fontsize=18)
-	plt.show()
-
-	geo_data = pd_data[['topic','sentiment','location']]
+	    data and then drawing bars to show the number of observations that fall in each bin.'''   
+	'''
+	if pd_data['sentiment'].empty:
+		print "No tweets to chart"
+	else:
+		sns.distplot(pd_data['sentiment'], kde=False, bins=5, rug=True)
+		if subject == ' ':
+			subject = 'unknown'
+		sns.plt.title('Sentiment Distribution: %s' % subject)
+		sns.plt.xlabel("Sentiment", fontsize=18)
+		sns.plt.ylabel("Number of Tweets", fontsize=18)
+		plt.show()
+	'''
+	geo_data = pd_data[['party','topic','sentiment','location']]
+	
 	return geo_data

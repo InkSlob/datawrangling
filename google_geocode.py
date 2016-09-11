@@ -7,7 +7,7 @@ import re
 import pickle
 from apiclient.discovery import build
 
-locations = pickle.load( open( "lat_lng_locations.p", "rb" ) )
+
 
 def get_keys():
 	keys = open('/home/master/my_python/google_geocode_key.txt', 'rb') 
@@ -19,12 +19,10 @@ def get_keys():
 	key_dict["key"] = geo_key[1]
 	return key_dict
 
-def get_location(location):
+def google_api_pull(location):
 	key = get_keys()['key']
 
 	base = "https://maps.googleapis.com/maps/api/geocode/json?address="
-	#location = 'detroit'	
-
 	url = base + location + '&key=' + key
 	url = url.replace("'", '')
 	url = url.replace(" ", '_')
@@ -38,9 +36,18 @@ def get_location(location):
 
 	tuple1 = (d_lat, d_lng)
 
+	return tuple1
+
+
+def get_location(location):
+	locations = pickle.load( open( "lat_lng_locations.p", "rb" ) )
+
 	if location in locations:
 		print "location submitted already exists."
+		tuple1 = locations.get(location)
+		print tuple1
 	else:
+		tuple1 = google_api_pull(location)
 		locations[location] = tuple1
 
 	pickle.dump( locations, open( "lat_lng_locations.p", "wb" ) )

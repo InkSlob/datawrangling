@@ -31,7 +31,6 @@ def twitter(search_topic, cnt):
 	auth.set_access_token(access_token, access_token_secret)
 	api = tweepy.API(auth, parser=tweepy.parsers.JSONParser())
 	public_tweets = api.search(q=search_topic, count=cnt, lang="en") #  since="2013-06-01" ,  show_user="true"
-	pickle.dump( public_tweets, open( "twitter_data_Trump_SINCE.p", "wb" ) )
+	#pickle.dump( public_tweets, open( "twitter_data_Trump_SINCE.p", "wb" ) )
 	#print "END"
 	return public_tweets
-
