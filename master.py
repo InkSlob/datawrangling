@@ -1,6 +1,8 @@
 #!/usr/bin/python
 import pickle 
 import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
 
 import twitter_pull as tp
 import make_table as mt
@@ -45,7 +47,7 @@ for key, val in config.items():
 		party = 'Trump'
 	else:
 		party = 'Hillary'
-	pulls_per_search = 10
+	pulls_per_search = 100
 	data = tp.twitter(val, pulls_per_search )
 	topic = str(val)
 	topic = topic.replace('"','')
@@ -55,7 +57,7 @@ for key, val in config.items():
 	da.insert_data(data, party, topic)
 
 #data = pickle.load( open( "/home/master/my_python/data_wrangling/twitter_data_Trump_SINCE.p", "rb" ))
-geo_cols = ['party', 'topic', 'sentiment', 'location']	
+geo_cols = ['party', 'topic', 'sentiment', 'location', 'created_at']	
 geo_df = pd.DataFrame(columns=geo_cols)
 for key, val in config.items():
 	topic = str(val)
@@ -63,7 +65,15 @@ for key, val in config.items():
 	current_df = sen.sentiment_overall(topic)
 	geo_df = geo_df.append(current_df)
 print "Generating map, this may take a few moments."
-#hillary_test = geo_df.loc[geo_df['party'] == 'Hillary']
+hillary_test = geo_df.loc[geo_df['party'] == 'Hillary']
+trump_test = geo_df.loc[geo_df['party'] == 'Trump']
 #print hillary_test.head(30)
 mp.make_map(geo_df)
+trump_time = trump_test.groupby('created_at').sum()
+trump_time.plot(subplots=True, figsize=(6,6), style='k--', label='Series')
+plt.show()
+hillary_time = hillary_test.groupby('created_at').sum()
+hillary_time.plot(subplots=True, figsize=(6,6), style='k--', label='Series')
+plt.show()
+#print trump_time.head(20)
 print "PROGRAM END"
